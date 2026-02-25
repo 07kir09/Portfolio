@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+  <head>
+    <!-- Контент меняется в первую очередь в data.js (объект window.content) -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Воякин Кирилл — Backend / Data Analyst / Data Scientist</title>
+    <meta
+      name="description"
+      content="Портфолио Backend / Data Analyst / Data Scientist: сервисы, аналитика данных и ML в финансах."
+    />
+    <meta
+      property="og:title"
+      content="Воякин Кирилл — Backend / Data Analyst / Data Scientist"
+    />
+    <meta
+      property="og:description"
+      content="Портфолио Backend / Data Analyst / Data Scientist: сервисы, аналитика данных и ML в финансах."
+    />
+    <meta property="og:image" content="assets/og.jpg" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-grid">
+      <header class="site-header" id="top">
+        <div class="header-inner">
+          <a href="#top" class="brand">
+            <div class="brand-logo" aria-hidden="true">KV</div>
+            <div class="brand-text">
+              <span class="brand-name">Воякин Кирилл</span>
+              <span class="brand-tagline">Портфолио про данные и инженерию</span>
+            </div>
+          </a>
+
+          <nav class="main-nav" aria-label="Основная навигация">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+            >
+              <span class="nav-toggle-line"></span>
+              <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-list" id="nav-menu">
+              <li><a href="#hero" data-section="hero">Home</a></li>
+              <li><a href="#about" data-section="about">About</a></li>
+              <li><a href="#journey" data-section="journey">Journey</a></li>
+              <li><a href="#skills" data-section="skills">Skills</a></li>
+              <li><a href="#contact" data-section="contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <button class="btn btn-ghost" type="button" id="project-shortcut">
+              Проект: Risk Calculator
+            </button>
+            <a class="btn btn-primary" href="#contact">Связаться</a>
+            <button
+              class="icon-button theme-toggle"
+              type="button"
+              id="theme-toggle"
+              aria-label="Переключить тему"
+            >
+              <span class="theme-icon" aria-hidden="true">☾</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <!-- Hero -->
+        <section class="section section-hero" id="hero">
+          <div class="hero-layout">
+            <div class="hero-text">
+              <p class="hero-kicker" id="hero-greeting">Привет!</p>
+              <h1 class="hero-title">
+                Я <span id="hero-name">Воякин Кирилл</span>
+              </h1>
+              <p class="hero-role" id="hero-role">Backend/ Data Analyst/ Data Scientist</p>
+              <p class="hero-location" id="hero-location">Москва, Россия</p>
+              <p class="hero-summary" id="hero-summary">
+                Строю надежный backend и аналитические решения: собираю данные,
+                считаю риск‑метрики и превращаю результаты в понятные отчеты.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" id="hero-primary-cta" href="#contact">
+                  Связаться
+                </a>
+                <a
+                  class="hero-secondary-link"
+                  id="hero-secondary-cta"
+                  href="assets/cv.pdf"
+                  download="Kirill_Voyakin_CV.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Скачать резюме
+                </a>
+              </div>
+              <div class="hero-social" id="hero-social" aria-label="Социальные сети">
+                <!-- Заполняется из data.js -->
+              </div>
+              <div class="hero-chips" id="hero-skill-chips">
+                <!-- Заполняется из data.js -->
+              </div>
+            </div>
+
+            <aside class="hero-aside">
+              <article class="card hero-avatar-card">
+                <div class="hero-avatar-wrapper">
+                  <img
+                    src="assets/avatar.png"
+                    alt="Аватар"
+                    class="hero-avatar"
+                    loading="lazy"
+                  />
+                  <div class="hero-floating-icons" id="hero-floating-icons">
+                    <!-- Заполняется из data.js -->
+                  </div>
+                </div>
+                <div class="hero-avatar-caption" id="hero-avatar-caption">
+                  Junior Quant / ML Engineer
+                </div>
+              </article>
+            </aside>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about" aria-labelledby="about-title">
+          <div class="section-header">
+            <h2 class="section-title" id="about-title">Обо мне</h2>
+            <p class="section-kicker">Кто я и чем могу быть полезен</p>
+          </div>
+          <div class="card about-card" id="about-content">
+            <!-- Параграфы с подсветками из data.js -->
+          </div>
+        </section>
+
+        <!-- Journey -->
+        <section class="section" id="journey" aria-labelledby="journey-title">
+          <div class="section-header">
+            <h2 class="section-title" id="journey-title">Мой путь</h2>
+            <p class="section-kicker">Опыт, города и маршруты</p>
+          </div>
+          <div class="journey-layout">
+            <div class="card journey-timeline" id="journey-timeline">
+              <!-- Таймлайн из data.js -->
+            </div>
+            <aside class="card journey-map-card">
+              <div class="journey-map-header">
+                <span class="journey-map-label">EUROPE MAP</span>
+                <div class="journey-map-controls" aria-hidden="true">
+                  <button class="map-btn" type="button">+</button>
+                  <button class="map-btn" type="button">−</button>
+                </div>
+              </div>
+              <div class="journey-map">
+                <div class="journey-map-placeholder" id="journey-map">
+                  <!-- Маркеры городов из data.js -->
+                </div>
+                <p class="journey-map-caption">
+                  Маршрут учебных и проектных активностей: города и проекты.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills" aria-labelledby="skills-title">
+          <div class="section-header">
+            <h2 class="section-title" id="skills-title">Навыки</h2>
+            <p class="section-kicker">Технологии и подходы, с которыми я работаю</p>
+          </div>
+          <div class="skills-grid" id="skills-groups">
+            <!-- Карточки групп навыков -->
+          </div>
+          <div class="skills-wide" id="skills-wide-cards">
+            <!-- Широкие карточки -->
+          </div>
+        </section>
+
+        <!-- Project highlight -->
+        <section
+          class="section"
+          id="project-highlight"
+          aria-labelledby="project-title"
+        >
+          <div class="section-header">
+            <h2 class="section-title" id="project-title">Ключевой проект</h2>
+            <p class="section-kicker">То, над чем сейчас работаю</p>
+          </div>
+          <article class="card project-card" id="project-card">
+            <!-- Заполняется из data.js -->
+          </article>
+        </section>
+
+        <!-- Education + Languages -->
+        <section class="section" id="education" aria-labelledby="education-title">
+          <div class="section-header">
+            <h2 class="section-title" id="education-title">Образование и языки</h2>
+            <p class="section-kicker">
+              Формальное образование и языковая картина мира
+            </p>
+          </div>
+          <div class="edu-lang-layout">
+            <div class="card edu-card" id="education-card">
+              <!-- Образование -->
+            </div>
+            <div class="card lang-card" id="languages-card">
+              <!-- Языки -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact" aria-labelledby="contact-title">
+          <div class="section-header">
+            <h2 class="section-title" id="contact-title">Связаться</h2>
+            <p class="section-kicker" id="contact-subtitle">
+              Обсудим backend, аналитику и data‑задачи
+            </p>
+          </div>
+          <div class="contact-stickers" id="contact-stickers">
+            <!-- Стикеры со ссылками -->
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p class="footer-copy" id="footer-text">
+            © 2026 Воякин Кирилл. Все права защищены.
+          </p>
+          <nav
+            class="footer-nav"
+            aria-label="Дополнительная навигация по разделам"
+          >
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#journey">Journey</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="footer-social" id="footer-social">
+            <!-- Повтор соц‑иконок -->
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
