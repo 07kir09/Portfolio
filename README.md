@@ -1,13 +1,16 @@
 # Portfolio — Kirill Voyakin
 
-Одностраничное портфолио в стиле neo-brutalism для профиля `Backend / Data Analyst / Data Scientist`.
+Одностраничное портфолио в стиле neo-brutalism для профиля
+`Junior Data Scientist / Applied AI Engineer`.
 
 ## Что внутри
 
 - Статический сайт без сборки: `index.html`, `styles.css`, `script.js`, `data.js`
 - Контент подгружается из `window.content` в `data.js`
 - Переключение темы (light/dark)
-- Блок `EUROPE MAP` с картой и маркерами маршрута
+- Измеримые результаты на первом экране
+- Таймлайн опыта и проектов со ссылками на репозитории
+- Визуальный pipeline `END-TO-END ML`
 - Резюме доступно по ссылке `assets/cv.pdf`
 
 ## Быстрый запуск локально
@@ -29,7 +32,7 @@ python3 -m http.server 5500
 - `brand` — логотип и подпись в шапке
 - `hero` — главный экран (имя, роль, summary, кнопки, соцсети)
 - `about` — блок "Обо мне"
-- `journey` — таймлайн и точки на карте
+- `journey` — таймлайн и этапы разработки ML-продукта
 - `skills` — навыки и карточки
 - `projectHighlight` — ключевой проект
 - `education`, `languages` — образование и языки
@@ -39,10 +42,10 @@ python3 -m http.server 5500
 
 Папка `assets/`:
 
-- `avatar.png` — фото/аватар
-- `cv.pdf` — резюме для кнопки "Скачать резюме"
+- `avatar.webp` — актуальное оптимизированное фото
+- `cv.pdf` — основное AI-резюме для кнопки "Скачать AI-резюме"
 - `og.jpg` — превью для соцсетей
-- `europe-map.svg` — карта для блока `EUROPE MAP`
+- `favicon.svg` — иконка вкладки
 
 ## Публикация на GitHub Pages
 
@@ -63,4 +66,3 @@ git push origin main
 5. `Save`
 
 Через 1-2 минуты сайт будет доступен по ссылке GitHub Pages.
-

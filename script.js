@@ -215,6 +215,27 @@
       });
     }
 
+    const metricsContainer = $('#hero-metrics');
+    if (metricsContainer) {
+      metricsContainer.innerHTML = '';
+      toArray(content.hero.metrics).forEach(function (metric) {
+        const item = document.createElement('div');
+        item.className = 'hero-metric';
+
+        const value = document.createElement('strong');
+        value.className = 'hero-metric-value';
+        value.textContent = metric.value || '';
+        item.appendChild(value);
+
+        const label = document.createElement('span');
+        label.className = 'hero-metric-label';
+        label.textContent = metric.label || '';
+        item.appendChild(label);
+
+        metricsContainer.appendChild(item);
+      });
+    }
+
     const floatingContainer = $('#hero-floating-icons');
     if (floatingContainer) {
       floatingContainer.innerHTML = '';
@@ -298,43 +319,47 @@
           item.appendChild(list);
         }
 
+        if (entry.link && entry.link.href) {
+          const link = document.createElement('a');
+          link.className = 'journey-link';
+          link.textContent = entry.link.label || 'Открыть проект';
+          link.href = entry.link.href;
+          if (/^https?:\/\//i.test(link.href)) {
+            link.target = '_blank';
+            link.rel = 'noreferrer';
+          }
+          item.appendChild(link);
+        }
+
         timeline.appendChild(item);
       });
     }
 
-    const map = $('#journey-map');
-    if (map) {
-      map.innerHTML = '';
-      const points = toArray(content.journey.map && content.journey.map.points);
+    const workflow = $('#product-flow');
+    if (workflow) {
+      workflow.innerHTML = '';
+      toArray(content.journey.workflow).forEach(function (step) {
+        const item = document.createElement('article');
+        item.className = 'product-flow-step';
 
-      if ((content.journey.map && content.journey.map.path) && points.length > 1) {
-        for (let i = 1; i < points.length; i += 1) {
-          const from = points[i - 1];
-          const to = points[i];
-          const dx = to.lng - from.lng;
-          const dy = to.lat - from.lat;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        const number = document.createElement('span');
+        number.className = 'product-flow-number';
+        number.textContent = step.number || '';
+        item.appendChild(number);
 
-          const line = document.createElement('div');
-          line.className = 'journey-map-path';
-          line.style.position = 'absolute';
-          line.style.left = from.lng + '%';
-          line.style.top = from.lat + '%';
-          line.style.width = distance + '%';
-          line.style.transform = 'rotate(' + angle + 'deg)';
-          line.style.transformOrigin = '0 0';
-          map.appendChild(line);
-        }
-      }
+        const text = document.createElement('div');
+        text.className = 'product-flow-text';
 
-      points.forEach(function (point) {
-        const marker = document.createElement('span');
-        marker.className = 'journey-map-marker';
-        marker.textContent = point.label || '';
-        marker.style.left = (point.lng || 0) + '%';
-        marker.style.top = (point.lat || 0) + '%';
-        map.appendChild(marker);
+        const title = document.createElement('strong');
+        title.textContent = step.title || '';
+        text.appendChild(title);
+
+        const description = document.createElement('span');
+        description.textContent = step.description || '';
+        text.appendChild(description);
+
+        item.appendChild(text);
+        workflow.appendChild(item);
       });
     }
   }
@@ -422,7 +447,9 @@
 
     const shortcut = $('#project-shortcut');
     if (shortcut) {
-      shortcut.textContent = 'Проект: ' + (content.projectHighlight.name || '...');
+      shortcut.textContent =
+        content.projectHighlight.shortcutLabel ||
+        'Проект: ' + (content.projectHighlight.name || '...');
     }
 
     const container = $('#project-card');
@@ -449,6 +476,26 @@
     description.className = 'project-description';
     description.textContent = content.projectHighlight.description || '';
     textWrap.appendChild(description);
+
+    const metrics = document.createElement('div');
+    metrics.className = 'project-metrics';
+    toArray(content.projectHighlight.metrics).forEach(function (metric) {
+      const badge = document.createElement('span');
+      badge.className = 'project-metric';
+
+      const value = document.createElement('strong');
+      value.textContent = metric.value || '';
+      badge.appendChild(value);
+
+      if (metric.label) {
+        badge.appendChild(document.createTextNode(' · ' + metric.label));
+      }
+
+      metrics.appendChild(badge);
+    });
+    if (metrics.children.length) {
+      textWrap.appendChild(metrics);
+    }
 
     const cta = document.createElement('a');
     cta.className = 'btn btn-primary project-cta';

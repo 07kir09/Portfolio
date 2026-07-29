@@ -4,21 +4,22 @@
     <!-- Контент меняется в первую очередь в data.js (объект window.content) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Воякин Кирилл — Backend / Data Analyst / Data Scientist</title>
+    <title>Воякин Кирилл — Junior Data Scientist / Applied AI Engineer</title>
     <meta
       name="description"
-      content="Портфолио Backend / Data Analyst / Data Scientist: сервисы, аналитика данных и ML в финансах."
+      content="Портфолио Junior Data Scientist / Applied AI Engineer: NLP, FinBERT, end-to-end ML-сервисы, FastAPI и аналитика данных."
     />
     <meta
       property="og:title"
-      content="Воякин Кирилл — Backend / Data Analyst / Data Scientist"
+      content="Воякин Кирилл — Junior Data Scientist / Applied AI Engineer"
     />
     <meta
       property="og:description"
-      content="Портфолио Backend / Data Analyst / Data Scientist: сервисы, аналитика данных и ML в финансах."
+      content="NLP, FinBERT и end-to-end ML-продукты: от данных и обучения до API, Docker и метрик."
     />
     <meta property="og:image" content="assets/og.jpg" />
     <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,17 +53,17 @@
               <span class="nav-toggle-line"></span>
             </button>
             <ul class="nav-list" id="nav-menu">
-              <li><a href="#hero" data-section="hero">Home</a></li>
-              <li><a href="#about" data-section="about">About</a></li>
-              <li><a href="#journey" data-section="journey">Journey</a></li>
-              <li><a href="#skills" data-section="skills">Skills</a></li>
-              <li><a href="#contact" data-section="contact">Contact</a></li>
+              <li><a href="#hero" data-section="hero">Главная</a></li>
+              <li><a href="#about" data-section="about">Обо мне</a></li>
+              <li><a href="#journey" data-section="journey">Опыт</a></li>
+              <li><a href="#skills" data-section="skills">Навыки</a></li>
+              <li><a href="#contact" data-section="contact">Контакты</a></li>
             </ul>
           </nav>
 
           <div class="header-actions">
             <button class="btn btn-ghost" type="button" id="project-shortcut">
-              Проект: Risk Calculator
+              Главный кейс: FinBERT
             </button>
             <a class="btn btn-primary" href="#contact">Связаться</a>
             <button
@@ -86,11 +87,13 @@
               <h1 class="hero-title">
                 Я <span id="hero-name">Воякин Кирилл</span>
               </h1>
-              <p class="hero-role" id="hero-role">Backend/ Data Analyst/ Data Scientist</p>
+              <p class="hero-role" id="hero-role">
+                Junior Data Scientist / Applied AI Engineer
+              </p>
               <p class="hero-location" id="hero-location">Москва, Россия</p>
               <p class="hero-summary" id="hero-summary">
-                Строю надежный backend и аналитические решения: собираю данные,
-                считаю риск‑метрики и превращаю результаты в понятные отчеты.
+                Создаю ML‑продукты полного цикла: от подготовки данных и
+                валидации моделей до API, визуализации и интеграции с интерфейсом.
               </p>
               <div class="hero-actions">
                 <a class="btn btn-primary" id="hero-primary-cta" href="#contact">
@@ -100,11 +103,11 @@
                   class="hero-secondary-link"
                   id="hero-secondary-cta"
                   href="assets/cv.pdf"
-                  download="Kirill_Voyakin_CV.pdf"
+                  download="Kirill_Voiakin_AI_Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Скачать резюме
+                  Скачать AI-резюме
                 </a>
               </div>
               <div class="hero-social" id="hero-social" aria-label="Социальные сети">
@@ -113,14 +116,17 @@
               <div class="hero-chips" id="hero-skill-chips">
                 <!-- Заполняется из data.js -->
               </div>
+              <div class="hero-metrics" id="hero-metrics" aria-label="Ключевые результаты">
+                <!-- Измеримые результаты из data.js -->
+              </div>
             </div>
 
             <aside class="hero-aside">
               <article class="card hero-avatar-card">
                 <div class="hero-avatar-wrapper">
                   <img
-                    src="assets/avatar.png"
-                    alt="Аватар"
+                    src="assets/avatar.webp"
+                    alt="Воякин Кирилл"
                     class="hero-avatar"
                     loading="lazy"
                   />
@@ -129,7 +135,7 @@
                   </div>
                 </div>
                 <div class="hero-avatar-caption" id="hero-avatar-caption">
-                  Junior Quant / ML Engineer
+                  Applied AI · NLP · ML Engineering
                 </div>
               </article>
             </aside>
@@ -150,28 +156,22 @@
         <!-- Journey -->
         <section class="section" id="journey" aria-labelledby="journey-title">
           <div class="section-header">
-            <h2 class="section-title" id="journey-title">Мой путь</h2>
-            <p class="section-kicker">Опыт, города и маршруты</p>
+            <h2 class="section-title" id="journey-title">Опыт и проекты</h2>
+            <p class="section-kicker">
+              От бизнес-задачи и данных до работающего ML-сервиса
+            </p>
           </div>
           <div class="journey-layout">
             <div class="card journey-timeline" id="journey-timeline">
               <!-- Таймлайн из data.js -->
             </div>
-            <aside class="card journey-map-card">
+            <aside class="card journey-map-card process-card">
               <div class="journey-map-header">
-                <span class="journey-map-label">EUROPE MAP</span>
-                <div class="journey-map-controls" aria-hidden="true">
-                  <button class="map-btn" type="button">+</button>
-                  <button class="map-btn" type="button">−</button>
-                </div>
+                <span class="journey-map-label">END-TO-END ML</span>
+                <span class="process-badge">4 шага</span>
               </div>
-              <div class="journey-map">
-                <div class="journey-map-placeholder" id="journey-map">
-                  <!-- Маркеры городов из data.js -->
-                </div>
-                <p class="journey-map-caption">
-                  Маршрут учебных и проектных активностей: города и проекты.
-                </p>
+              <div class="product-flow" id="product-flow">
+                <!-- Этапы разработки ML-продукта из data.js -->
               </div>
             </aside>
           </div>
@@ -199,7 +199,7 @@
         >
           <div class="section-header">
             <h2 class="section-title" id="project-title">Ключевой проект</h2>
-            <p class="section-kicker">То, над чем сейчас работаю</p>
+            <p class="section-kicker">Кейс с измеримым качеством модели</p>
           </div>
           <article class="card project-card" id="project-card">
             <!-- Заполняется из data.js -->
@@ -211,7 +211,7 @@
           <div class="section-header">
             <h2 class="section-title" id="education-title">Образование и языки</h2>
             <p class="section-kicker">
-              Формальное образование и языковая картина мира
+              Сильная математическая база и технический английский
             </p>
           </div>
           <div class="edu-lang-layout">
@@ -229,7 +229,7 @@
           <div class="section-header">
             <h2 class="section-title" id="contact-title">Связаться</h2>
             <p class="section-kicker" id="contact-subtitle">
-              Обсудим backend, аналитику и data‑задачи
+              Обсудим Applied AI, NLP и ML‑продукты
             </p>
           </div>
           <div class="contact-stickers" id="contact-stickers">
@@ -247,11 +247,11 @@
             class="footer-nav"
             aria-label="Дополнительная навигация по разделам"
           >
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#journey">Journey</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#hero">Главная</a>
+            <a href="#about">Обо мне</a>
+            <a href="#journey">Опыт</a>
+            <a href="#skills">Навыки</a>
+            <a href="#contact">Контакты</a>
           </nav>
           <div class="footer-social" id="footer-social">
             <!-- Повтор соц‑иконок -->
